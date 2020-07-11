@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+}
+
+/* CABEÇALHO */
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.cabecalho:not(h1) {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cabecalho input {
+  width: 280px;
+  padding-left: 10px;
+  height: 30px;
+  border: 1px solid rgba(175, 175, 175, 0.418);
+  border-radius: 5px;
+  margin-top: 83px;
+  position: relative;
+  background-image: url(../img/busca.png);
+  background-repeat: no-repeat;
+  background-position-x: 250px;
+  background-position-y: 6px;
+}
+
+.cabecalho button {
+  border: 1px solid rgba(175, 175, 175, 0.418);
+  width: 140px;
+  height: 35px;
+  font-size: 0.9em;
+  padding: 5px 10px;
+  margin-top: 83px;
+  background-color: transparent;
+}
+
+.cabecalho button:hover,
+.cabecalho input:hover {
+  transform: scale(1.1);
+  border: solid 1px #ff51579f;
+}
+
+.cabecalho input:focus {
+  outline: solid 1px #ff51579f;
+  border-radius: 5px;
+}
+
+.cabecalho h1 {
+  margin-top: 0px;
+}
+
+/* MENU */
+
+.menu-bg {
+  background: #ff5158;
+  max-width: 1280px;
+  margin: 0 auto;
+  border-radius: 0;
+  margin-bottom: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+li a {
+  font-style: none;
+  text-decoration: none;
+  margin: 10px 20px 0 -2px;
+  /* margin-left: 20px; */
+  color: #ffffff;
+  font-size: 1.4em;
+}
+
+li a:hover {
+  color: #ebc3c4;
+  text-decoration: none;
+}
+
+/* DESTAQUES */
+
+.banner img {
+  width: 100%;
+}
+
+.destaque img {
+  width: 400px;
+}
+
+.destaque img:hover,
+.cartoes > div:hover {
+  transform: scale(1.01);
+  box-shadow: 1px 3px 15px #ff5158;
+}
+
+.destaque {
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-between;
+}
+
+.quadrado {
+  width: 280px;
+  height: 230px;
+  background-color: rgba(128, 128, 128, 0.384);
+}
+
+.cartoes {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  justify-content: space-between;
+}
+
+.cartoes h5 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.cartoes > div {
+  border: 1px solid rgba(0, 0, 0, 0.473);
+  padding: 5px;
+  height: 330px;
+}
+
+footer {
+  background-color: #ff5158;
+  padding: 10px 0;
+}
+
+footer section {
+  display: inline-block;
+}
+
+ol {
+  list-style: none;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+ol::first-line {
+  text-transform: uppercase;
+}
+
+/* MEDIA QUERY */
+
+@media (min-width: 320px) {
+  .cabecalho img {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .cabecalho input {
+    margin: 20px 5px;
+  }
+
+  .cabecalho button {
+    margin: 10px auto;
+  }
+}
+
+@media (min-width: 375px) {
+  .cabecalho img {
+    width: 300px;
+    margin: 0 28px;
+  }
+
+  .cabecalho input {
+    margin: 20px 30px;
+  }
+
+  .cabecalho button {
+    margin: 10px auto;
+  }
+}
+
+@media (min-width: 414px) {
+  .cabecalho img {
+    width: 300px;
+    margin: 0 50px;
+  }
+
+  .cabecalho input {
+    margin: 10px 50px;
+  }
+
+  .cabecalho button {
+    margin: 10px auto;
+  }
+}
+
+@media (min-width: 569px) {
+  .cabecalho img {
+    width: 300px;
+    margin: 50px 133px;
+  }
+
+  .cabecalho input {
+    margin: 10px 133px;
+  }
+
+  .cabecalho button {
+    margin: 0 50px;
+  }
+}
+
+@media (min-width: 710px) {
+  .cabecalho img {
+    width: 300px;
+    margin: 10px 200px;
+  }
+
+  .cabecalho input {
+    margin: 10px 200px;
+  }
+
+  .cabecalho button {
+    margin: 0 50px;
+  }
+}
+
+@media (min-width: 760px) {
+  .cabecalho {
+    display: flex;
+  }
+
+  .cabecalho img {
+    width: 300px;
+    margin: 50px -80px;
+    order: 2;
+  }
+
+  .cabecalho input {
+    margin: 10px auto;
+  }
+
+  .cabecalho button {
+    margin: 0 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cabecalho {
+    display: flex;
+  }
+
+  .cabecalho img {
+    width: 300px;
+    margin: 0 -80px 50px -80px;
+    order: 2;
+  }
+
+  .cabecalho input {
+    margin: 90px auto;
+  }
+
+  .cabecalho button {
+    margin: 90px 60px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .destaque {
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  .banner img {
+    height: 200px;
+  }
+
+  figure + figure {
+    margin-left: 10px;
+  }
+
+  .quadrado {
+    width: auto;
+  }
+
+  .cartoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cartoes > div {
+    width: 97%;
+    height: 90%;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  }
+}
